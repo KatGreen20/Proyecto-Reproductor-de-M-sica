@@ -44,7 +44,7 @@ h1 {
 img {
     width: 500px;
     height: 500px;
-    padding: 10%;
+    padding: 1%;
 }
 
 .controles {
@@ -58,7 +58,7 @@ img {
 
 .resultados {
     padding: 10%;
-    background-color: #D97EB0;
+    background-color: #698897;
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 30px;
@@ -66,7 +66,7 @@ img {
 
 .playlist {
     padding: 10%;
-    background-color: #906FA6;
+    background-color: #698897;
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 30px;
@@ -74,14 +74,14 @@ img {
 
 .favoritos {
     padding: 10%;
-    background-color: #2F3A59;
+    background-color: #698897;
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 30px;
 }
 
 .datosCancion {
-    padding: 10%;
+    padding: 5%;
 }
 
 #btn-buscar{
@@ -109,6 +109,24 @@ h4{
 h3{
     margin-bottom: 2%;
 }
-/* hr {
-    background-color: red;
-} */
+
+.btn-actions{
+    width: 17%;
+}
+
+.c1 {
+    display: flex;
+    justify-items: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#canNom {
+    width: 83%;
+}
+
+.contenedor2{
+    margin-top: 50%;
+}
+
+    
