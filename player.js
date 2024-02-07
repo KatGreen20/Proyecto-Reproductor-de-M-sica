@@ -23,6 +23,14 @@ class Reproductor{
             new Cancion('Un año sin lluvia', 'Selena Gomez', '3:29', 'Pop', '2010','caratula/caratula5.jpg', 'Audio/Un año sin lluvia.mp3'),
             new Cancion('Escapar', 'Kudai', '4:46', 'Pop', '2004','caratula/caratula6.jpg', 'Audio/Escapar.mp3'),
             new Cancion('Snowman', 'Sia', '2:45', 'Balada', '2019','caratula/caratula7.jpg', 'Audio/Snowman.mp3'),
+            new Cancion('Si no estás', 'Íñigo Quintero','3:04', 'Pop','2022','caratula/caratula8.jpg','Audio/Si no estas.mp3'),
+            new Cancion('Chau amor', 'Crismi', '2:26', 'Cumbia Uruguaya', '2023', 'caratula/caratula9.jpg', 'Audio/Chau amor.mp3'),
+            new Cancion('Sabe mejor', 'Crismi', '2:47', 'Cumbia Uruguaya', '2023', 'caratula/caratula10.jpg', 'Audio/Sabe mejor.mp3'),
+            new Cancion('Good to be', 'Mark Ambor', '2:27', 'Pop', '2023', 'caratula/caratula11.jpg', 'Audio/Good to be.mp3'),
+            new Cancion('Al Aire', 'Morat', '2:26', 'Pop', '2021', 'caratula/caratula12.jpg', 'Audio/Al Aire.mp3'),
+            new Cancion('Enamórate de alguien más', 'Morat', '3:49', 'Pop', '2021', 'caratula/caratula13.jpg', 'Audio/Enamórate de Alguien Más.mp3'),
+            new Cancion('Idiota', 'Morat,Danna Paola', '3:03', 'Pop', '2021', 'caratula/caratula14.jpg', 'Audio/Idiota.mp3'),
+            new Cancion('Summertime', 'My Chemical Romance', '4:06', 'Pop', '2010', 'caratula/caratula15.jpg', 'Audio/Summertime.mp3'),
         ]
 
     }
