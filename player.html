@@ -14,52 +14,19 @@
     <main>
         <div class="contenedor1">
             <div>
-                <label style="color: white;">
+                <label for="inputBusqueda" style="color: white;">
                     Buscador
                 </label>
             </div>
             <div class="buscar">
-                <input type="text" placeholder="  Ingresa tu canción">
-                <button id="btn-buscar">Buscar</button>
+                <input type="text" id="inputBuscar" placeholder="  Ingresa tu canción">
+                <button id="btnBuscar">Buscar</button>
             </div>
            
             <div class="resultados">
                 <h3 style="text-align: center;">Resultados del buscador</h3>
-                <div>
-                    <div>
-                        <h3>Canción1 
-                            <i class="fa-solid fa-play"></i> 
-                            <i class="fa-solid fa-heart"></i>
-                            <i class="fa-solid fa-plus"></i>
-                        </h3>  
-                    </div>
-    
-                    <div>
-                        <h3>Canción2 
-                            <i class="fa-solid fa-play"></i>
-                            <i class="fa-solid fa-heart"></i>
-                            <i class="fa-solid fa-plus"></i>
-                        </h3>
-                        
-                    </div>
-    
-                    <div>
-                        <h3>Canción3
-                        <i class="fa-solid fa-play"></i>
-                        <i class="fa-solid fa-heart"></i>
-                        <i class="fa-solid fa-plus"></i>
-                        </h3>
-                        
-                    </div>
-    
-                    <div>
-                        <h3>Canción4
-                        <i class="fa-solid fa-play"></i>
-                        <i class="fa-solid fa-heart"></i>
-                        <i class="fa-solid fa-plus"></i>
-                        </h3>
-                        
-                    </div>
+                <div id="resultados">
+                    <!-- resultados de la búsqueda -->
     
                 </div>
             </div>
@@ -150,46 +117,28 @@
         
 
         <div class="contenedor2">
-            <div>
-                <img src="./img/portada.jpg" alt="caratula">
-            </div>
-            <div class="datosCancion">
-                <h4 style="color: white;">
-                    Nombre:
-                </h4>
-                <h4 style="color: white;">
-                    Duración:
-                </h4>
-                <h4 style="color: white;">
-                    Album:
-                </h4>
-                <h4 style="color: white;">
-                    Género:
-                </h4>
-                <h4 style="color: white;"> 
-                    Año:
-                </h4>
-            </div>
-            <div class="controles">
-                <button>
-                    <i class="fa-solid fa-backward-step" style="font-size:48px;"></i>
-                </button>
-                <button>
-                    <i class="fa-solid fa-play" style="font-size:48px;"></i>
-                </button>
-                <button>
-                    <i class="fa-solid fa-forward-step" style="font-size:48px;"></i>
-                </button>
-                <button>
-                    <i class="fa-solid fa-stop" style="font-size:48px;"></i>
-                </button>
-                <button>
-                    <i class="fa-solid fa-volume-xmark" style="font-size:48px;"></i>
-                </button>
-            </div>
+            <div id="reproductor">
+                <img id="caratula" src="" alt="Carátula de la canción">
+                <p id="nombre"></p>
+                <p id="artista"></p>
+                <p id="anio"></p>
+                <p id="duracion"></p>
+                <p id="genero"></p>
+               
+              </div>
+              <div>
+                <audio id="audioPlayer" controls style="display: none;"></audio>
+                    <button onclick="pausar()">Pausar</button>
+                        <button onclick="mutear()">Silenciar</button>
+                    <button onclick="reproducirSiguiente()">Siguiente</button>
+                        <button onclick="reproducirAnterior()">Anterior</button>
+
+              </div>
+
         </div>
 
     </main>
+    <script src="player.js"></script>
     <script src="https://kit.fontawesome.com/8c5c6d490f.js" crossorigin="anonymous"></script>
 </body>
 </html>
