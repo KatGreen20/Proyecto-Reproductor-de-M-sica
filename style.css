@@ -1,0 +1,123 @@
+/* body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+header h1 {
+	margin: 0;
+}
+
+header h1 span {
+	color: #ffcc00;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline;
+	margin-right: 1rem;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+main {
+	background-color: #f2f2f2;
+	padding: 2rem;
+	text-align: center;
+}
+
+main h2 {
+	margin: 0;
+	margin-bottom: 0.5rem;
+}
+
+main p {
+	margin: 0;
+	font-size: 0.8rem;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+	text-align: center;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #6abadeba;
+  font-family: 'Arial';
+}
+
+.login {
+  width: 382px;
+  overflow: hidden;
+  margin: auto;
+  margin: 20 0 0 450px;
+  padding: 80px;
+  background: #23463f;
+  border-radius: 15px;
+}
+
+h2 {
+  text-align: center;
+  color: #277582;
+  padding: 20px;
+}
+
+label {
+  color: #08ffd1;
+  font-size: 17px;
+}
+
+#Uname {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+}
+
+#Pass {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 8px;
+}
+
+#log {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 17px;
+  padding-left: 7px;
+  color: blue;
+}
+
+span {
+  color: white;
+  font-size: 17px;
+}
+
+a {
+  float: right;
+  background-color: grey;
+}

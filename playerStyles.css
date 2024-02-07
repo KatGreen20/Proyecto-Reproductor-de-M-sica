@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+* {
+    /* border: 1px solid black; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-image: url(./img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 7%;
+}
+
+input {
+    background-color: #F8F8F0;
+    border: #fff solid 1px;
+    border-radius: 20px;
+    color: #000000;
+    height: 35px;
+    width: 500px;
+}
+
+h1 {
+    display: inline-block;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    padding: 10%;
+}
+
+.controles {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor1 {
+    padding: 10%;
+}
+
+.resultados {
+    padding: 10%;
+    background-color: #D97EB0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+.playlist {
+    padding: 10%;
+    background-color: #906FA6;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+.favoritos {
+    padding: 10%;
+    background-color: #2F3A59;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+.datosCancion {
+    padding: 10%;
+}
+
+#btn-buscar{
+    background-color: #4CAF50; 
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#btn-buscar:hover{
+    opacity: 0.6; 
+}
+
+div{
+    margin-bottom: 2%;
+}
+
+h4{
+    margin-bottom: 2%;
+}
+
+h3{
+    margin-bottom: 2%;
+}
+/* hr {
+    background-color: red;
+} */
