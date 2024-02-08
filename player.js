@@ -31,27 +31,88 @@ class Reproductor{
             new Cancion('Enamórate de alguien más', 'Morat', '3:49', 'Pop', '2021', 'caratula/caratula13.jpg', 'Audio/Enamórate de Alguien Más.mp3'),
             new Cancion('Idiota', 'Morat,Danna Paola', '3:03', 'Pop', '2021', 'caratula/caratula14.jpg', 'Audio/Idiota.mp3'),
             new Cancion('Summertime', 'My Chemical Romance', '4:06', 'Pop', '2010', 'caratula/caratula15.jpg', 'Audio/Summertime.mp3'),
-        ]
+        ];
+        this.playlist = [];
+        this.favoritos = [];
+
+        //hay que llamar a los elemetos que hacen cosas 
+        this.buscarBtn = document.getElementById('buscarBtn');
+        this.buscarInput = document.getElementById('buscarInput');
+        //el div donde salen las canciones encontradas
+        this.listaCanciones = document.getElementById('listaCanciones');
+        //el div donde se visualizara mi playlist
+        this.miPlaylist = document.getElementById('miPlaylist');
+        //el div de los favoritos
+        this.listaFavoritos = document.getElementById('listaFavoritos');
+
+        
 
     }
-    buscarPorNombre(nombre) {
-        return this.catalogoCanciones.filter(cancion => cancion.nombre === cancion.nombre);
+   
+
+    buscarCanciones(filtro) {
+        // Convertimos el filtro a minúsculas para hacer la búsqueda case-insensitive
+        
+
+        // Filtramos las canciones que coincidan con el filtro en el nombre o el artista
+        return this.catalogoCanciones.filter(cancion => {
+            return cancion.nombre|| 
+            cancion.artista || 
+            cancion.genero;
+        });
     }
 
+    mostrarResultadosBusqueda(resultados) {
+        listaCanciones.innerHTML = ''; // Limpia
+        
     
-
+        resultados.forEach(cancion => {
+            const item = document.createElement('li');
+            item.innerHTML = `
+                <span>${cancion.nombre} - ${cancion.artista}</span>
+                <button class="play-btn"><i class="fa-solid fa-play"></i> </button>
+                <button class="fav-btn"><i class="fa-solid fa-heart"></button>
+                <button class="add-playlist-btn"><i class="fa-solid fa-plus"></button>`;
+            listaCanciones.appendChild(item);
     
+        });
+    }
+
+    reproducir(cancion) {
+        
+    }
+
+    pausar() {
+        
+    }
+
+    adelantar() {
+        
+    }
+
+    retroceder() {
+        
+    }
+
+    agregarAPlaylist(cancion) {
+        
+    }
+
+    agregarAFavoritos(cancion) {
+       
+    }
+
+    quitarDePlaylist(cancion) {
+        
+    }
+
+    quitarDeFavoritos(cancion) {
+       
+    }
 }
 
 
 
-class Favoritos {
-
-}
-
-class MiPlaylist{
-
-}
 
 const reproductor = new Reproductor();
 
@@ -203,18 +264,6 @@ const reproductor = new Reproductor();
 
 
 
-
-// function reproducir(nombreCancion) {
-//     // Lógica para reproducir la canción
-// }
-
-// function agregarFavorito(nombreCancion) {
-//     // Lógica para agregar la canción a favoritos
-// }
-
-// function agregarAPlaylist(nombreCancion) {
-//     // Lógica para agregar la canción a la playlist del usuario
-// }
 
 
 
