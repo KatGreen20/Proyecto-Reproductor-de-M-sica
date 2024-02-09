@@ -44,21 +44,50 @@ class Reproductor{
         this.miPlaylist = document.getElementById('miPlaylist');
         //el div de los favoritos
         this.listaFavoritos = document.getElementById('listaFavoritos');
+        this.buscarBtn.addEventListener('click', () => {
+            this.buscar();
+        });
+        this.audioPlayer = document.getElementById('audioPlayer');
+
+        this.pausarBtn =document.getElementById('pausarBtn');
+        this.mutearBtn =document.getElementById('mutearBtn');
+        this.stopBtn =document.getElementById('stopBtn');
+        
+       
+        this.pausarBtn.addEventListener('click', () => {
+            this.pausar();
+        });
+
+        this.mutearBtn.addEventListener('click', () => {
+            this.mutear();
+        });
+
+        this.stopBtn.addEventListener('click', () => {
+            this.stopCancion();
+        });
+
+
 
         
 
     }
    
+    buscar(){
+        const filtro = this.buscarInput.value.toLowerCase();
+        const resultados = this.buscarCanciones(filtro);
+        this.mostrarResultadosBusqueda(resultados);
+    }
 
+    
     buscarCanciones(filtro) {
-        // Convertimos el filtro a minúsculas para hacer la búsqueda case-insensitive
+        const filtroMinusculas= filtro.toLowerCase();
         
 
-        // Filtramos las canciones que coincidan con el filtro en el nombre o el artista
+        // Filtramos las canciones que coincidan con el filtro en el nombre o el artista genero
         return this.catalogoCanciones.filter(cancion => {
-            return cancion.nombre|| 
-            cancion.artista || 
-            cancion.genero;
+            return cancion.nombre.toLowerCase().includes(filtroMinusculas)|| 
+            cancion.artista.toLowerCase().includes(filtroMinusculas) || 
+            cancion.genero.toLowerCase().includes(filtroMinusculas);
         });
     }
 
@@ -69,28 +98,68 @@ class Reproductor{
         resultados.forEach(cancion => {
             const item = document.createElement('li');
             item.innerHTML = `
-                <span>${cancion.nombre} - ${cancion.artista}</span>
-                <button class="play-btn"><i class="fa-solid fa-play"></i> </button>
-                <button class="fav-btn"><i class="fa-solid fa-heart"></button>
+                <span>${cancion.nombre} - ${cancion.artista} - ${cancion.genero}</span>
+                <button class="playbtn"><i class="fa-solid fa-play"></i> </button>
+                <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
                 <button class="add-playlist-btn"><i class="fa-solid fa-plus"></button>`;
             listaCanciones.appendChild(item);
+            
+
+            const buttons= item.getElementsByClassName('playbtn');
+            const playBtn =buttons [0];
+            playBtn.addEventListener('click',()=>{
+                reproductor.reproducir(cancion);
+            });
+
+            
+
     
         });
     }
 
     reproducir(cancion) {
+ debugger;
+        this.audioPlayer.src= cancion.urlSong;
+        this.audioPlayer.play();
+
+       
+        //muestra los elemtos de la cancion 
+        document.getElementById('caratula').src= cancion.caratula;
+        document.getElementById('nombre').innerText= `Nombre: ${cancion.nombre}`;
+        document.getElementById('artista').innerText=`Artista: ${cancion.artista}`;
+        document.getElementById('anio').innerText=`Año: ${cancion.anio}`;
+        document.getElementById('duracion').innerText= `Duracion: ${cancion.duracion}`;
+        document.getElementById('genero').innerText=`Genero: ${cancion.genero}`;
         
     }
 
     pausar() {
+        if (this.audioPlayer.paused) {
+            this.audioPlayer.play(); 
+        } else {
+            this.audioPlayer.pause(); 
+        }
+    }
+    
+        
+        
+
+    
+
+
+    mutear(){
+        this.audioPlayer.muted= !this.audioPlayer.muted;
+    }
+    stopCancion(){
+        this.audioPlayer.pause();
+        this.audioPlayer.currentTime=0;
+    }
+
+    reproducirAnterior() {
         
     }
 
-    adelantar() {
-        
-    }
-
-    retroceder() {
+    reproducirSiguiente() {
         
     }
 
