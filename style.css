@@ -65,6 +65,15 @@ body {
   background-color: #6abadeba;
   font-family: 'Arial';
 }
+.contenedor1 {
+  height: 600px;
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
 
 .login {
   width: 382px;

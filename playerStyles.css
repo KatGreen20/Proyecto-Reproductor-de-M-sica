@@ -34,7 +34,7 @@ input {
     border-radius: 20px;
     color: #000000;
     height: 35px;
-    width: 500px;
+    width: 300px;
 }
 
 h1 {
@@ -42,9 +42,44 @@ h1 {
 }
 
 img {
-    width: 500px;
-    height: 500px;
-    padding: 10%;
+    width: 350px;
+    height: 350px;
+    padding: 10%; width: 100%;
+    height: 366px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transform-origin: 0% 0%;
+}
+
+.info{
+    position: absolute;
+    left: 50%;
+    top: 440px;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.info h2{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.controls{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 100px;
+    z-index: 10;
+    transition: all 0.3s;
 }
 
 .controles {
@@ -53,8 +88,38 @@ img {
 }
 
 .contenedor1 {
-    padding: 10%;
+    height: 600px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
 }
+
+.contenedor2 {
+    height: 600px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.playlist{
+    
+    height: 425px;
+    width: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 378px;
+    transform-origin: 0%, 0%;
+    transition: all 0.3s;
+}
+
+
+
 
 .resultados {
     padding: 10%;
@@ -64,13 +129,7 @@ img {
     border-radius: 30px;
 }
 
-.playlist {
-    padding: 10%;
-    background-color: #906FA6;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 30px;
-}
+
 
 .favoritos {
     padding: 10%;
