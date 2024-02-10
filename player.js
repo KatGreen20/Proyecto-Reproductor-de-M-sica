@@ -44,10 +44,14 @@ class Reproductor{
         this.miPlaylist = document.getElementById('miPlaylist');
         //el div de los favoritos
         this.listaFavoritos = document.getElementById('listaFavoritos');
+
+        this.cancionActual= document.getElementById('cancionActual');
+
+        this.audioPlayer = document.getElementById('audioPlayer');
+
         this.buscarBtn.addEventListener('click', () => {
             this.buscar();
         });
-        this.audioPlayer = document.getElementById('audioPlayer');
 
         this.pausarBtn =document.getElementById('pausarBtn');
         this.mutearBtn =document.getElementById('mutearBtn');
@@ -57,32 +61,25 @@ class Reproductor{
         this.pausarBtn.addEventListener('click', () => {
             this.pausar();
         });
-
         this.mutearBtn.addEventListener('click', () => {
             this.mutear();
         });
-
         this.stopBtn.addEventListener('click', () => {
             this.stopCancion();
         });
 
 
-
-        
-
     }
-   
     buscar(){
         const filtro = this.buscarInput.value.toLowerCase();
         const resultados = this.buscarCanciones(filtro);
         this.mostrarResultadosBusqueda(resultados);
     }
 
-    
-    buscarCanciones(filtro) {
-        const filtroMinusculas= filtro.toLowerCase();
+        buscarCanciones(filtro) {
         
-
+            const filtroMinusculas= filtro.toLowerCase();
+        
         // Filtramos las canciones que coincidan con el filtro en el nombre o el artista genero
         return this.catalogoCanciones.filter(cancion => {
             return cancion.nombre.toLowerCase().includes(filtroMinusculas)|| 
@@ -111,6 +108,17 @@ class Reproductor{
                 reproductor.reproducir(cancion);
             });
 
+            const favBtns = item.getElementsByClassName('fav-btn');
+            const favBtn = favBtns[0];
+            favBtn.addEventListener('click', () => {
+                reproductor.agregarAFavoritos(cancion);
+            });
+    
+            const addPlaylistBtns = item.getElementsByClassName('add-playlist-btn');
+            const addPlaylistBtn = addPlaylistBtns[0];
+            addPlaylistBtn.addEventListener('click', () => {
+                reproductor.agregarAPlaylist(cancion);
+            });
             
 
     
@@ -141,11 +149,6 @@ class Reproductor{
         }
     }
     
-        
-        
-
-    
-
 
     mutear(){
         this.audioPlayer.muted= !this.audioPlayer.muted;
