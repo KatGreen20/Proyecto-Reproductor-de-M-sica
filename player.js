@@ -31,16 +31,17 @@ class Reproductor{
             new Cancion('Enamórate de alguien más', 'Morat', '3:49', 'Pop', '2021', 'caratula/caratula13.jpg', 'Audio/Enamórate de Alguien Más.mp3'),
             new Cancion('Idiota', 'Morat,Danna Paola', '3:03', 'Pop', '2021', 'caratula/caratula14.jpg', 'Audio/Idiota.mp3'),
             new Cancion('Summertime', 'My Chemical Romance', '4:06', 'Pop', '2010', 'caratula/caratula15.jpg', 'Audio/Summertime.mp3'),
-            new Cancion('pov', 'Areana Grande','3:23','Pop','2020', 'caratula/caratula16.png','Audio/Pov.mp3' ),
+            new Cancion('pov', 'Ariana Grande','3:23','Pop','2020', 'caratula/caratula16.png','Audio/Pov.mp3' ),
             new Cancion('I believe','Jonas Brother','3:38','Pop','2019', 'caratula/caratula17.jpg','Audio/I Believe.mp3'),
             new Cancion('Rise up', 'Andra day','4:56','R&B contemporáneo', '2015', 'caratula/caratula18.jpg', 'Audio/Rise Up.mp3'),
-            new Cancion('I Knew You Were Trouble','taylor swift','3:17','Pop','2012','caratula/caratula19.jpg','Audio/I Knew You Were Trouble.mp3'),
+            new Cancion('I Knew You Were Trouble','Taylor Swift','3:17','Pop','2012','caratula/caratula19.jpg','Audio/I Knew You Were Trouble.mp3'),
             new Cancion('I Loved Her First', 'Heartland','3:39','Country','2006', 'caratula/caratula20.jpg', 'Audio/I Loved Her First.mp3'),
             new Cancion('Bless the Broken Road', 'Rascal Flatts','3:46','Country','2004','caratula/caratula21.jpg','Audio/Bless the Broken Road.mp3'),
-            new Cancion('never enough','The Greatest Showman','3:18','Pop','2017','caratula/caratula22.jpg','Audio/never enough.mp3'),
+            new Cancion('Never enough','The Greatest Showman','3:18','Pop','2017','caratula/caratula22.jpg','Audio/never enough.mp3'),
         ];
         this.playlist = [];
         this.favoritos = [];
+        this.cargarCanciones();
 
         //hay que llamar a los elemetos que hacen cosas 
         this.buscarBtn = document.getElementById('buscarBtn');
@@ -73,10 +74,17 @@ class Reproductor{
         });
         this.stopBtn.addEventListener('click', () => {
             this.stopCancion();
+
+
         });
 
 
     }
+    cargarCanciones() {
+        // Al cargar la página, mostrar todas las canciones disponibles
+        this.mostrarResultadosBusqueda(this.catalogoCanciones);
+    }
+
     buscar(){
         const filtro = this.buscarInput.value.toLowerCase();
         const resultados = this.buscarCanciones(filtro);
