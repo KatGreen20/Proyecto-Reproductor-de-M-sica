@@ -40,6 +40,7 @@ class Reproductor{
             new Cancion('I Loved Her First', 'Heartland','3:39','Country','2006', 'caratula/caratula20.jpg', 'Audio/I Loved Her First.mp3'),
             new Cancion('Bless the Broken Road', 'Rascal Flatts','3:46','Country','2004','caratula/caratula21.jpg','Audio/Bless the Broken Road.mp3'),
             new Cancion('Never enough','The Greatest Showman','3:18','Pop','2017','caratula/caratula22.jpg','Audio/never enough.mp3'),
+            new Cancion('Stay with me','Punch','0:14','Pop','2016','caratula/caratula23.jpg','Audio/Stay with me.mp3'),
         ];
         this.cancionesBusqueda=[]; //array de las canciones de la busqueda
         this.cargarCanciones(); //llamo al metodo que carga el catalogo
