@@ -58,7 +58,7 @@ footer {
 	padding: 1rem;
 	text-align: center;
 } */
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap');
 :root {
   --background-color: #ffe5e5;
   --primer-color: #5d12d2;
@@ -72,6 +72,7 @@ footer {
   --second-font: "Kanit", sans-serif;
   font-weight: 200;
   font-style: normal;
+  --tercer-font:'Josefin', 'sans-serif';
 }
 body {
   margin: 0;
@@ -107,6 +108,7 @@ body {
   justify-content: center;
   
   }
+  
 
 h2 {
   text-align: center;
@@ -120,8 +122,9 @@ h2 {
 
 label {
   color: var(--quinto-color);
-  font-size: 17px;
+  font-size: 20px;
   font-family: var(--second-font);
+  font-weight: lighter;
   
 }
 
@@ -168,6 +171,12 @@ a {
   transform: rotate(-3deg) scale(1.1);
   color: #fff;
   background-color: #dfb2f4;
+  
+}
+#iconoReproductor {
+  display: grid;
+  justify-content: center;
+  padding-top: 30px;
   
 }
 /* Animacion del texto "Login Page", etiqueta h2 */
