@@ -26,6 +26,7 @@ main {
 .titulo {
     text-align: center;
     margin-top: 7%;
+    
 }
 
 input {
@@ -34,7 +35,8 @@ input {
     border-radius: 20px;
     color: #000000;
     height: 35px;
-    width: 300px;
+    width: 530px;
+    padding-left: 8px;
 }
 #buscarBtn{
     background-color: #65cbe9;
@@ -53,6 +55,7 @@ input {
     transform: rotate(-3deg) scale(1.1);
     box-shadow: 0px 3px 5px rgba(0,0,0,.4);
     background-color: #dfb2f4;
+    color: #F8F8F0;
     
 }
 #buscarBtn:hover span{
@@ -104,6 +107,7 @@ button:hover {
 
 h1 {
     display: inline-block;
+    
 }
 
 img {
@@ -155,12 +159,15 @@ img {
 
 .contenedor1 {
     height: 600px;
-    width: 400px;
+    width: 680px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    padding-left: 35px;
+   
+    
 }
 
 .contenedor2 {
@@ -192,13 +199,14 @@ img {
     /* scroll vertical */
     overflow-y: auto;
 }
+
 #listaCanciones::-webkit-scrollbar {
-    width: 10px; /* Ancho del scroll */
+    width: 15px; /* Ancho del scroll */
 }
 
 #listaCanciones::-webkit-scrollbar-thumb {
     background-color: #eac4d5; /* Color del scroll */
-    border-radius: 5px; /* Borde redondeado */
+    border-radius: 7px; /* Borde redondeado */
 }
 
 #listaCanciones::-webkit-scrollbar-thumb:hover {
