@@ -36,6 +36,71 @@ input {
     height: 35px;
     width: 300px;
 }
+#buscarBtn{
+    background-color: #65cbe9;
+    border-radius: 15px;
+    border: #00FF0000 ;
+    padding: 8px 10px;
+  margin:10px 4px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  
+}
+#buscarBtn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+    background-color: #dfb2f4;
+    
+}
+#buscarBtn:hover span{
+    animation-play-state: paused;
+}
+
+.playbtn {
+    background-color: #00FF0000; /* Color de fondo para el botón de paly */
+    color:#bc98f3; 
+    font-size: 20px;
+    
+}
+.playbtn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+
+}
+
+.fav-btn {
+    background-color: #00FF0000; /* Color de fondo para el fav */
+    color: #fa34df; 
+    font-size: 20px;
+}
+.fav-btn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+}
+
+.add-playlist-btn {
+    background-color: #00FF0000; /* Color de fondo para el add */
+    color: #e1b1bc ; 
+    font-size: 20px;
+}
+.add-playlist-btn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+}
+
+
+button {
+    border: none; 
+    cursor: pointer; 
+}
+
+  /* Cambia el color de fondo al pasar el ratón */
+button:hover {
+    opacity: 0.8; /* Reducir la opacidad al pasar el ratón */
+}
 
 h1 {
     display: inline-block;
@@ -80,6 +145,7 @@ img {
     bottom: 100px;
     z-index: 10;
     transition: all 0.3s;
+    color: #4E02BB ;
 }
 
 .controles {
@@ -117,7 +183,69 @@ img {
     transform-origin: 0%, 0%;
     transition: all 0.3s;
 }
+/*scroll que si funciona*/
+#listaCanciones {
+    /* Altura máxima para el div */
+    max-height: 200px;
+    color: #2f2c79;
+    list-style: none;
+    /* scroll vertical */
+    overflow-y: auto;
+}
+#listaCanciones::-webkit-scrollbar {
+    width: 10px; /* Ancho del scroll */
+}
 
+#listaCanciones::-webkit-scrollbar-thumb {
+    background-color: #eac4d5; /* Color del scroll */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+#listaCanciones::-webkit-scrollbar-thumb:hover {
+    background-color: #dfb2f4;
+}
+/*scroll que no funciona*/
+#listaPlaylist {
+    /* Altura máxima para el div */
+    max-height: 300px;
+    color: #2f2c79;
+    list-style: none;
+    /* scroll vertical */
+    overflow-y: auto;
+}
+#listaPlaylist::-webkit-scrollbar {
+    width: 10px; /* Ancho del scroll */
+}
+
+#listaPlaylist::-webkit-scrollbar-thumb {
+    background-color: #eac4d5; /* Color del scroll */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+#listaPlaylist::-webkit-scrollbar-thumb:hover {
+    background-color: #dfb2f4;
+}
+/*sroll que no funciona*/
+#listaFavoritos {
+    /* Altura máxima para el div */
+    max-height: 200px;
+    color: #2f2c79;
+    list-style: none;
+    /* scroll vertical */
+    overflow-y: auto;
+}
+#listaFavoritos::-webkit-scrollbar {
+    width: 10px; /* Ancho del scroll */
+}
+
+#listaFavoritos::-webkit-scrollbar-thumb {
+    background-color: #eac4d5; /* Color del scroll */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+#listaFavoritos::-webkit-scrollbar-thumb:hover {
+    background-color: #dfb2f4;
+}
 
 
 
@@ -143,18 +271,10 @@ img {
     padding: 10%;
 }
 
-#botonBuscar{
-    background-color: #4CAF50; 
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-#btn-buscar:hover{
-    opacity: 0.6; 
+i{
+    background-color: #00FF0000;
+    
+    border-color: #00FF0000;
 }
 
 div{

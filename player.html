@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="playerStyles.css">
-    <title>Document</title>
+    <title>Grupo 3</title>
 </head>
 <body>
     <div class="titulo">
@@ -14,101 +14,38 @@
     <main>
         <div class="contenedor1">
             <div>
-                <label for="inputBusqueda" style="color: white;">
-                    Buscador
+                <label for="buscarInput" style="color: white;">
+                    Busca tu Canción 
                 </label>
             </div>
             <div class="buscar">
                 <input type="text" id="buscarInput" placeholder="  Ingresa tu canción">
                 <button id="buscarBtn">Buscar</button>
             </div>
-           
             <div class="listaCanciones">
                 <h3 style="text-align: center;">Resultados del buscador</h3>
                 <div id="listaCanciones">
-                    <!-- resultados de la búsqueda -->
-    
+                    <!-- resultados de la búsqueda y catálogo -->
                 </div>
             </div>
             
             <div id="miPlaylist">
                 <h3 style="text-align: center;">Mi Playlist</h3>
-                <div>
+                <div id="listaPlaylist">
                     <div>
-                        <h3>Canción1
-                        <i class="fa-solid fa-play"></i>
-                        <i class="fa-solid fa-heart"></i>
-                        <i class="fa-solid fa-trash"></i>
-                        </h3>
+                        <h4>Agrega a tu Playlist🎵...
+                        </h4>
                         
                     </div>
-    
-                    <div>
-                        <h3>Canción2
-                        <i class="fa-solid fa-play"></i>
-                        <i class="fa-solid fa-heart"></i>
-                        <i class="fa-solid fa-trash"></i>
-                        </h3>
-                        
-                    </div>
-    
-                    <div>
-                        <h3>Canción3
-                        <i class="fa-solid fa-play"></i>
-                        <i class="fa-solid fa-heart"></i>
-                        <i class="fa-solid fa-trash"></i>
-                        </h3>
-                        
-                    </div>
-    
-                    <div>
-                        <h3>Canción4
-                        <i class="fa-solid fa-play"></i>
-                        <i class="fa-solid fa-heart"></i>
-                        <i class="fa-solid fa-trash"></i>
-                        </h3>
-                        
-                    </div>
-    
                 </div>
             </div>
             
             <div class="listaFavoritos">
                 <h3 style="text-align: center;">Favoritos</h3>
-                <div>
+                <div id="listaFavoritos">
                     <div>
-                        <h3>Canción1
-                        <i class="fa-solid fa-play"></i>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-plus"></i>
-                        </h3>
-                        
-                    </div>
-    
-                    <div>
-                        <h3>Canción2
-                        <i class="fa-solid fa-play"></i>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-plus"></i>
-                        </h3>
-                        
-                    </div>
-    
-                    <div>
-                        <h3>Canción3
-                        <i class="fa-solid fa-play"></i>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-plus"></i>
-                        </h3>
-                        
-                    </div>
-    
-                    <div>
-                        <h3>Canción4
-                        <i class="fa-solid fa-play"></i>
-                        <i class="fa-regular fa-heart"></i>
-                        <i class="fa-solid fa-plus"></i>
-                        </h3>
+                        <h4>Agrega tus cancionnes favoritas💖... 
+                        </h4>
                         
                     </div>
                 </div>
@@ -119,15 +56,15 @@
         <div class="contenedor2">
             <div id="reproductor">
                 <img  id="caratula" src="img/Logo.jpg" alt="Carátula de la canción">
-              </div>
-              <div class="info">
+            </div>
+            <div class="info">
                 <h2 id="nombre"></h2>
                 <h2 id="artista"></h2>
                 <h2 id="anio"></h2>
                 <h2 id="duracion"></h2>
                 <h2 id="genero"></h2>
-              </div>
-              <div class="controls">
+            </div>
+            <div class="controls">
                 <audio id="audioPlayer" controls style="display: none;"></audio>
                 
                     <i class="fa-solid fa-volume-xmark" id="mutearBtn" ></i>  
@@ -135,9 +72,7 @@
                     <i class="fa-solid fa-play" id="pausarBtn" ></i> 
                     <i class="fa-solid fa-forward" id="next" onclick="reproducirSiguiente()"></i>
                     <i class="fa-solid fa-stop"  id="stopBtn" ></i>
-                   
-
-              </div>
+            </div>
 
         </div>
 
