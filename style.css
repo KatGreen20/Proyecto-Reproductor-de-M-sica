@@ -65,14 +65,25 @@ footer {
   --segundo-color: #b931fc;
   --tercer-color: #ff6ac2;
   --cuarto-color: #000000;
-  --primary-font: 'Kanit', 'sans-serif';
-  --second-font: 'Kanit', 'sans-serif';
+  --quinto-color:#dfb2f4;
+  --primary-font: "Kanit", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  --second-font: "Kanit", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 body {
   margin: 0;
   padding: 0;
   background-color: var(#ffe5e5);
   font-family: var(--primary-font);
+  background-image: url(./img/fondo-login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+  
 }
 .contenedor1 {
   height: 600px;
@@ -80,8 +91,8 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+  /* background-color: #fff; */
+  /* box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); */
 }
 
 .login {
@@ -94,19 +105,23 @@ body {
   border-radius: 10px;
   display:grid;
   justify-content: center;
+  
   }
 
 h2 {
   text-align: center;
   color: var(--cuarto-color);
   font-family: var(--primary-font);
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 20px;
+  text-shadow: 2px 2px 5px var(--tercer-color);
 }
 
 label {
-  color: var(--segundo-color);
+  color: var(--quinto-color);
   font-size: 17px;
+  font-family: var(--second-font);
+  
 }
 
 #Uname {
@@ -121,7 +136,7 @@ label {
   width: 300px;
   height: 30px;
   border: none;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   padding-left: 8px;
 }
 
@@ -131,7 +146,11 @@ label {
   border: none;
   border-radius: 29px;
   padding-left: 7px;
-  color: var(--segundo-color);
+  color: var(--tercer-color);
+  font-family: var(--primary-font);
+  font-weight: 800;
+  font-style: normal;
+  font-size: 20px;
 }
 
 span {
@@ -142,4 +161,11 @@ span {
 a {
   float: right;
   background-color: grey;
+}
+#log:hover{
+  transition: all .5s;
+  transform: rotate(-3deg) scale(1.1);
+  color: #fff;
+  background-color: #dfb2f4;
+  
 }
