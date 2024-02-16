@@ -172,7 +172,7 @@ a {
   color: #fff;
   background-color: #dfb2f4;
   box-shadow: 5px 5px  var(--background-color);
-  
+  cursor: pointer;
   
 }
 #iconoReproductor {

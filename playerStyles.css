@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,0,200;0,800;1,200;1,300;1,800;&display=swap');
 * {
     /* border: 1px solid black; */
     padding: 0;
@@ -15,28 +16,27 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+
 .fa-user{
     display: flex;
     justify-content: right;
     background-color: #00FF0000; /* Color de fondo para el fav */
-    color: #dfb2f4; 
+    color: #D97EB0; 
     font-size: 50px;
     padding-right: 220px;
+    text-shadow: 2px 2px 1px #65cbe9;
+    
     
 }
 .fa-user:hover {
     transition: all .5s;
     text-shadow: 5px 5px #65cbe9;  
     color: #F8F8F0;
+    
 }
-#salir{
-    display: grid;
-    justify-content: right;
-    padding-top: 30px;
-    width: 100px;
-    height: 100px;
-    z-index: 9999;
-}
+
+
 
 main {
     text-align: left;
@@ -134,7 +134,19 @@ button:hover {
 
 h1 {
     display: inline-block;
+          
     
+}
+.re {
+    
+    font-family: "Kanit", sans-serif;
+  font-weight: 800;
+  font-size: 70px;
+  color: #D97EB0;
+  
+  /* text-shadow: 2px 4px 5px #F8F8F0; */
+  animation: myAnim 2s ease 0s 1 normal forwards;
+  
 }
 
 img {
@@ -178,6 +190,44 @@ img {
     transition: all 0.3s;
     color: #4E02BB ;
 }
+/* .controls:hover {
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+    
+} */
+#mutearBtn:hover {
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+    
+}
+#prev:hover{
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+}
+#pausarBtn:hover{
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+}
+#next:hover{
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+}
+#stopBtn:hover{
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+}
 
 .controles {
     display: flex;
@@ -185,13 +235,14 @@ img {
 }
 
 .contenedor1 {
-    height: 1000px;
+    height: 810px;
     width: 680px;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     background-color: #fff;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    /* box-shadow: 5px 5px 1px #65cbe9; */
+    border: 5px solid #65cbe9;
     padding-left: 35px;
    
     
@@ -204,7 +255,8 @@ img {
     overflow: hidden;
     border-radius: 10px;
     background-color: #fff;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 8px 10px 1px #fa34df;
+    
 }
 
 .playlist{
@@ -225,6 +277,8 @@ img {
     list-style: none;
     /* scroll vertical */
     overflow-y: auto;
+    border-bottom:2px solid #65cbe9;
+    
 }
 
 #listaCanciones::-webkit-scrollbar {
@@ -248,6 +302,7 @@ img {
     list-style: none;
     /* scroll vertical */
     overflow-y: auto;
+    border-bottom:2px solid #65cbe9;
 }
 #listaPlaylist::-webkit-scrollbar {
     width: 15px; /* Ancho del scroll */
@@ -269,6 +324,7 @@ img {
     list-style: none;
     /* scroll vertical */
     overflow-y: auto;
+    border-bottom:2px solid #65cbe9;
 }
 #listaFavoritos::-webkit-scrollbar {
     width: 15px; /* Ancho del scroll */
@@ -328,3 +384,32 @@ h3{
 /* hr {
     background-color: red;
 } */
+
+/* Animacion del texto "Reproductor", etiqueta re */
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateX(-10px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateX(10px);
+	}
+
+	80% {
+		transform: translateX(8px);
+	}
+
+	90% {
+		transform: translateX(-8px);
+	}
+}
