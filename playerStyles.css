@@ -19,9 +19,15 @@ body {
     display: flex;
     justify-content: right;
     background-color: #00FF0000; /* Color de fondo para el fav */
-    color: #fa34df; 
+    color: #dfb2f4; 
     font-size: 50px;
+    padding-right: 220px;
     
+}
+.fa-user:hover {
+    transition: all .5s;
+    text-shadow: 5px 5px #65cbe9;  
+    color: #F8F8F0;
 }
 #salir{
     display: grid;
@@ -228,6 +234,7 @@ img {
 #listaCanciones::-webkit-scrollbar-thumb {
     background-color: #eac4d5; /* Color del scroll */
     border-radius: 7px; /* Borde redondeado */
+    width: 15px; /* Ancho del scroll */
 }
 
 #listaCanciones::-webkit-scrollbar-thumb:hover {
@@ -243,7 +250,7 @@ img {
     overflow-y: auto;
 }
 #listaPlaylist::-webkit-scrollbar {
-    width: 10px; /* Ancho del scroll */
+    width: 15px; /* Ancho del scroll */
 }
 
 #listaPlaylist::-webkit-scrollbar-thumb {
@@ -264,7 +271,7 @@ img {
     overflow-y: auto;
 }
 #listaFavoritos::-webkit-scrollbar {
-    width: 10px; /* Ancho del scroll */
+    width: 15px; /* Ancho del scroll */
 }
 
 #listaFavoritos::-webkit-scrollbar-thumb {
@@ -274,6 +281,7 @@ img {
 
 #listaFavoritos::-webkit-scrollbar-thumb:hover {
     background-color: #dfb2f4;
+    width: 15px; /* Ancho del scroll */
 }
 
 
