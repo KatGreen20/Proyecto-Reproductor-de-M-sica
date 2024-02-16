@@ -15,6 +15,22 @@ body {
     background-size: cover;
     background-position: center;
 }
+.fa-user{
+    display: flex;
+    justify-content: right;
+    background-color: #00FF0000; /* Color de fondo para el fav */
+    color: #fa34df; 
+    font-size: 50px;
+    
+}
+#salir{
+    display: grid;
+    justify-content: right;
+    padding-top: 30px;
+    width: 100px;
+    height: 100px;
+    z-index: 9999;
+}
 
 main {
     text-align: left;
@@ -24,8 +40,13 @@ main {
 }
 
 .titulo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     text-align: center;
     margin-top: 7%;
+    gap: 600px;
+
     
 }
 
@@ -158,7 +179,7 @@ img {
 }
 
 .contenedor1 {
-    height: 600px;
+    height: 1000px;
     width: 680px;
     position: relative;
     overflow: hidden;
@@ -215,7 +236,7 @@ img {
 /*scroll que no funciona*/
 #listaPlaylist {
     /* Altura máxima para el div */
-    max-height: 300px;
+    max-height: 150px;
     color: #2f2c79;
     list-style: none;
     /* scroll vertical */
@@ -236,7 +257,7 @@ img {
 /*sroll que no funciona*/
 #listaFavoritos {
     /* Altura máxima para el div */
-    max-height: 200px;
+    max-height: 150px;
     color: #2f2c79;
     list-style: none;
     /* scroll vertical */
