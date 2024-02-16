@@ -13,7 +13,10 @@ class Cancion{
 //Clase reproductor que manejara las funciones del Reproductor
 class Reproductor{
     catalogoCanciones;
-    cancionesBusqueda; 
+    cancionesBusqueda;
+    listaFavoritos;
+    listaPlaylist;
+    listaActiva;
     indiceCancionActual = -1;
 
     constructor(){
@@ -46,6 +49,8 @@ class Reproductor{
         this.cargarCanciones(); //llamo al metodo que carga el catalogo
         this.listaFavoritos=[]; //array de las canciones favoritas
         this.listaPlaylist=[]; //array de las canciones de Mi Playlist
+        this.listaActiva = 'catalogoCanciones';
+
 
 
         //hay que llamar a los elementos que hacen cosas 
@@ -73,15 +78,24 @@ class Reproductor{
         this.nextBtn= document.getElementById('next');
         //metodo Ended que se dispara cundo la cancion termina
         //y continua con la siguiente dependiendo de que lista es
-        this.audioPlayer.addEventListener('ended', ()=>{
-            if(this.cancionesBusqueda===this.catalogoCanciones){
-                this.reproducirSiguiente();
-            }else if (this.cancionesBusqueda===this.listaFavoritos){
-                this.reproducirFavoritoSiguiente();
-            }else if(this.cancionesBusqueda===this.listaPlaylist){
-                this.reproducirPlaylistSiguiente();
+        this.audioPlayer.addEventListener('ended', () => {
+            switch (this.listaActiva) {
+                case 'catalogoCanciones':
+                    this.reproducirCatalogoSiguiente();
+                    break;
+                case 'cancionesBusqueda':
+                    this.reproducirSiguiente();
+                        break;
+                case 'listaFavoritos':
+                    this.reproducirFavoritoSiguiente();
+                    break;
+                case 'listaPlaylist':
+                    this.reproducirPlaylistSiguiente();
+                    break;
+                default:
+                    console.error('Lista activa no reconocida:', this.listaActiva);
             }
-            });
+        });
         //Metodos que escuchan a los btns de pausa mute y stop
         this.pausarBtn.addEventListener('click', () => {
             this.pausar();
@@ -93,22 +107,26 @@ class Reproductor{
             this.stopCancion();
         });
         //Eventos que escuchan al btn Anterior segun la Lista
-        this.prevBtn.addEventListener('click', () =>{
-            if(this.cancionesBusqueda===this.catalogoCanciones){
+        this.prevBtn.addEventListener('click', () => {
+            if (this.listaActiva === 'catalogoCanciones') {
+                this.reproducirCatalogoAnterior();
+            } else if (this.listaActiva === 'cancionesBusqueda') {
                 this.reproducirAnterior();
-            }else if(this.cancionesBusqueda===this.listaFavoritos){
+            } else if (this.listaActiva === 'listaFavoritos') {
                 this.reproducirFavoritoAnterior();
-            }else if(this.cancionesBusqueda===this.listaPlaylist){
+            } else if (this.listaActiva === 'listaPlaylist') {
                 this.reproducirPlaylistAnterior();
             }
         });
-        //Eventos que escuchan al Btb Siguiente segun la lIsta
+
         this.nextBtn.addEventListener('click', () => {
-            if (this.cancionesBusqueda === this.catalogoCanciones) {
+            if (this.listaActiva === 'catalogoCanciones') {
+                this.reproducirCatalogoSiguiente();
+            } else if (this.listaActiva === 'cancionesBusqueda') {
                 this.reproducirSiguiente();
-            } else if (this.cancionesBusqueda === this.listaFavoritos) {
+            } else if (this.listaActiva === 'listaFavoritos') {
                 this.reproducirFavoritoSiguiente();
-            } else if(this.cancionesBusqueda=== this.listaPlaylist){
+            } else if (this.listaActiva === 'listaPlaylist') {
                 this.reproducirPlaylistSiguiente();
             }
         });
@@ -130,6 +148,9 @@ class Reproductor{
         const filtro = this.buscarInput.value.toLowerCase();
         const resultados = this.buscarCanciones(filtro);
         this.mostrarResultadosBusqueda(resultados);
+    
+        // Restablecer el índice de la canción actual
+        this.indiceCancionActual = -1;
     }
 
     buscarCanciones(filtro) {
@@ -146,6 +167,7 @@ class Reproductor{
     //Metodo que muestra los resultados de la BUsqueda
     mostrarResultadosBusqueda(resultados) {
         this.cancionesBusqueda = resultados;
+        this.listaActiva = 'cancionesBusqueda';
         listaCanciones.innerHTML = ''; // Limpia
         //logica que muestra si no hay coincidencias
         if(resultados.length===0){
@@ -181,31 +203,82 @@ class Reproductor{
         });
         }
     }
-//Metodo que reproduce la cancion desde la lsita de Busqueda y muestra detalles
-//Tambien reproduce una canción específica de un array de canciones.
-    reproducir(cancionIndex) {
-        if (cancionIndex < 0 || cancionIndex >= this.cancionesBusqueda.length) {
+
+    reproducirCatalogo(cancionIndex) {
+        if (cancionIndex < 0 || cancionIndex >= this.catalogoCanciones.length) {
             console.error('Índice de canción no válido.');
             return;
         }
         
-        const cancion = this.cancionesBusqueda[cancionIndex];
-        console.log('Array de canciones:', this.cancionesBusqueda);
+        const cancion = this.catalogoCanciones[cancionIndex];
+        console.log('Array de canciones:', this.catalogoCanciones);
         console.log('Posición de la canción:', cancionIndex);
         this.audioPlayer.src = cancion.urlSong;
         this.audioPlayer.play();
-
+    
         // Actualiza el índice de la canción actual
         this.indiceCancionActual = cancionIndex;
-
+    
         // Muestra los elementos de la canción
         document.getElementById('caratula').src = cancion.caratula;
         document.getElementById('nombre').innerText = `Nombre: ${cancion.nombre}`;
         document.getElementById('artista').innerText = `Artista: ${cancion.artista}`;
         document.getElementById('anio').innerText = `Año: ${cancion.anio}`;
-        document.getElementById('duracion').innerText = `Duracion: ${cancion.duracion}`;
-        document.getElementById('genero').innerText = `Genero: ${cancion.genero}`;
+        document.getElementById('duracion').innerText = `Duración: ${cancion.duracion}`;
+        document.getElementById('genero').innerText = `Género: ${cancion.genero}`;
+        
+        this.listaActiva = 'catalogoCanciones';
+        // No cambia la lista activa
     }
+    
+    // Método para reproducir la siguiente canción del catálogo completo
+    reproducirCatalogoSiguiente() {
+        if (this.indiceCancionActual < this.catalogoCanciones.length - 1) {
+            this.indiceCancionActual++;
+        } else {
+            this.indiceCancionActual = 0; // Vuelve al inicio del catálogo
+        }
+        this.reproducirCatalogo(this.indiceCancionActual);
+    }
+    
+    // Método para reproducir la canción anterior del catálogo completo
+    reproducirCatalogoAnterior() {
+        if (this.indiceCancionActual > 0) {
+            this.indiceCancionActual--;
+        } else {
+            this.indiceCancionActual = this.catalogoCanciones.length - 1; // Última canción del catálogo
+        }
+        this.reproducirCatalogo(this.indiceCancionActual);
+    }
+
+//Metodo que reproduce la cancion desde la lsita de Busqueda y muestra detalles
+//Tambien reproduce una canción específica de un array de canciones.
+reproducir(cancionIndex) {
+    if (cancionIndex < 0 || cancionIndex >= this.cancionesBusqueda.length) {
+        console.error('Índice de canción no válido.');
+        return;
+    }
+    
+    const cancion = this.cancionesBusqueda[cancionIndex];
+    console.log('Array de canciones:', this.cancionesBusqueda);
+    console.log('Posición de la canción:', cancionIndex);
+    this.audioPlayer.src = cancion.urlSong;
+    this.audioPlayer.play();
+
+    // Actualiza el índice de la canción actual
+    this.indiceCancionActual = cancionIndex;
+
+    // Muestra los elementos de la canción
+    document.getElementById('caratula').src = cancion.caratula;
+    document.getElementById('nombre').innerText = `Nombre: ${cancion.nombre}`;
+    document.getElementById('artista').innerText = `Artista: ${cancion.artista}`;
+    document.getElementById('anio').innerText = `Año: ${cancion.anio}`;
+    document.getElementById('duracion').innerText = `Duracion: ${cancion.duracion}`;
+    document.getElementById('genero').innerText = `Genero: ${cancion.genero}`;
+    
+    // Actualiza la lista activa
+    this.listaActiva = 'cancionesBusqueda';
+}
 
     //metodo que pausa la cancion funciona para todas las listas
     pausar() {
@@ -226,23 +299,23 @@ class Reproductor{
     }
     //metodo que permite cambiar a la cancion Siguiente para, la lista cancionesBusqueda[]
     reproducirSiguiente() {
-        if (this.cancionesBusqueda === this.catalogoCanciones) {
+        
             if (this.indiceCancionActual < this.cancionesBusqueda.length - 1) {
                 this.indiceCancionActual++;
             } else {
                 this.indiceCancionActual = 0; // Vuelve al inicio del array, permite reiniciar la lista 
             }
-        }
+        
         this.reproducir(this.indiceCancionActual); //reproduce cancion siguiente
     }
 
     reproducirAnterior() {
-        if (this.cancionesBusqueda === this.catalogoCanciones) {
+        
             if (this.indiceCancionActual > 0) {
                 this.indiceCancionActual--;
             } else {
                 this.indiceCancionActual = this.cancionesBusqueda.length - 1; // Última canción del array
-            }
+            
         }
         this.reproducir(this.indiceCancionActual);
     }
@@ -257,6 +330,7 @@ class Reproductor{
     }
 
     mostrarFavoritos(){
+        this.listaActiva = 'listaFavoritos';
         this.listaFavoritosElement.innerHTML = ''; //limpia
         this.listaFavoritos.forEach(cancion => {
             const item = document.createElement('li');
@@ -307,7 +381,8 @@ class Reproductor{
         document.getElementById('anio').innerText = `Año: ${cancion.anio}`;
         document.getElementById('duracion').innerText = `Duracion: ${cancion.duracion}`;
         document.getElementById('genero').innerText = `Genero: ${cancion.genero}`;
-    
+        
+        this.listaActiva = 'listaFavoritos';
         // No cambia la lista activa
     }
 
@@ -346,6 +421,7 @@ class Reproductor{
     }
 
     mostrarPlaylist(){
+        this.listaActiva = 'listaPlaylist';
         this.listaPlaylistElement.innerHTML = ''; //limpia
         this.listaPlaylist.forEach(cancion => {
             const item = document.createElement('li');
@@ -393,7 +469,8 @@ class Reproductor{
         document.getElementById('anio').innerText = `Año: ${cancion.anio}`;
         document.getElementById('duracion').innerText = `Duracion: ${cancion.duracion}`;
         document.getElementById('genero').innerText = `Genero: ${cancion.genero}`;
-
+        
+        this.listaActiva = 'listaPlaylist';
     }
     reproducirPlaylistSiguiente(){
         if (this.indiceCancionActual < this.listaPlaylist.length - 1) {
