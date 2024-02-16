@@ -15,13 +15,15 @@
     <div class="login">
         <form id="login">
             <label><b>User Name</b></label><br>
-            <input type="text" name="Uname" id="Uname" placeholder="Username"><br><br>
+            <input type="text" name="Uname" id="username" placeholder="Username"><br><br>
             <label><b>Password</b></label><br>
-            <input type="Password" name="Pass" id="Pass" placeholder="Password"><br><br>
-            <input type="button" name="log" id="log" value="Iniciar sesion">
+            <input type="Password" name="Pass" id="password" placeholder="Password"><br><br>
+            <input type="button" name="log" id="log" onclick="attemptLogin()" value="Iniciar sesion">
             <br><br>
            
         </form>
     </div>
+    <script src="./login.js"></script>
+
 </body>
 </html>
