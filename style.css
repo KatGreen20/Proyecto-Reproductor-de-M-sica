@@ -171,6 +171,8 @@ a {
   transform: rotate(-3deg) scale(1.1);
   color: #fff;
   background-color: #dfb2f4;
+  box-shadow: 5px 5px  var(--background-color);
+  
   
 }
 #iconoReproductor {
