@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,0,200;0,800;1,200;1,300;1,800;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     /* border: 1px solid black; */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Josefin Sans', sans-serif;
+    
 }
 
 body {
@@ -22,7 +22,7 @@ body {
     display: flex;
     justify-content: right;
     background-color: #00FF0000; /* Color de fondo para el fav */
-    color: #D97EB0; 
+    color: #fa34df; 
     font-size: 50px;
     padding-right: 220px;
     text-shadow: 2px 2px 1px #65cbe9;
@@ -142,9 +142,10 @@ h1 {
     font-family: "Kanit", sans-serif;
   font-weight: 800;
   font-size: 70px;
-  color: #D97EB0;
   
-  /* text-shadow: 2px 4px 5px #F8F8F0; */
+  color: #4E02BB;
+  padding-right: 320px;
+  text-shadow: 2px 4px 1px #fa34df;
   animation: myAnim 2s ease 0s 1 normal forwards;
   
 }
@@ -244,7 +245,7 @@ img {
     /* box-shadow: 5px 5px 1px #65cbe9; */
     border: 5px solid #65cbe9;
     padding-left: 35px;
-   
+    font-family: 'Josefin Sans', sans-serif;
     
 }
 
@@ -256,7 +257,7 @@ img {
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 8px 10px 1px #fa34df;
-    
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .playlist{

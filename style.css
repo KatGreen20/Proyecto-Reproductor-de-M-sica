@@ -59,6 +59,7 @@ footer {
 	text-align: center;
 } */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   --background-color: #ffe5e5;
   --primer-color: #5d12d2;
@@ -67,12 +68,12 @@ footer {
   --cuarto-color: #000000;
   --quinto-color:#dfb2f4;
   --primary-font: "Kanit", sans-serif;
-  font-weight: 800;
-  font-style: normal;
+  /* font-weight: 800; */
+  /* font-style: normal; */
   --second-font: "Kanit", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-  --tercer-font:'Josefin', 'sans-serif';
+  /* font-weight: 200; */
+  /* font-style: normal; */
+  --tercer-font:"Josefin Sans", sans-serif;
 }
 body {
   margin: 0;
@@ -116,14 +117,14 @@ h2 {
   font-family: var(--primary-font);
   font-size: 3rem;
   padding: 3px;
-  text-shadow: 2px 2px 5px var(--tercer-color);
+  text-shadow: 2px 2px 1px var(--tercer-color);
   animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
 label {
   color: var(--quinto-color);
   font-size: 20px;
-  font-family: var(--second-font);
+  font-family: var(--tercer-font);
   font-weight: lighter;
   
 }
@@ -135,15 +136,27 @@ label {
   /* border-radius: 3px; */
   padding-left: 8px;
 }
-
+#username {
+  width: 300px;
+  height: 25px;
+  border-radius: none;
+  background-color: #ffe5e5;
+}
 #Pass {
   width: 300px;
-  height: 30px;
+  height: 50px;
   border: none;
   /* border-radius: 3px; */
   padding-left: 8px;
+  
 }
-
+#password {
+  width: 300px;
+  height: 25px;
+  border-radius: none;
+  background-color: #ffe5e5;
+  
+}
 #log {
   width: 310px;
   height: 50px;
@@ -170,7 +183,7 @@ a {
   transition: all .5s;
   transform: rotate(-3deg) scale(1.1);
   color: #fff;
-  background-color: #dfb2f4;
+  background-color: #ff6ac2;
   box-shadow: 5px 5px  var(--background-color);
   cursor: pointer;
   
