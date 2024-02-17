@@ -15,6 +15,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    
 }
 
 
@@ -50,14 +51,14 @@ main {
     justify-content: flex-end;
     align-items: center;
     text-align: center;
-    margin-top: 7%;
+    margin-top: 2%;
     gap: 600px;
 
     
 }
 
 input {
-    background-color: #F8F8F0;
+    background-color: #dfded5;
     border: #fff solid 1px;
     border-radius: 20px;
     color: #000000;
@@ -91,7 +92,7 @@ input {
 
 .playbtn {
     background-color: #00FF0000; /* Color de fondo para el botón de paly */
-    color:#bc98f3; 
+    color:#9a70d8; 
     font-size: 20px;
     
 }
@@ -103,7 +104,7 @@ input {
 
 .fav-btn {
     background-color: #00FF0000; /* Color de fondo para el fav */
-    color: #fa34df; 
+    color: #b56aab; 
     font-size: 20px;
 }
 .fav-btn:hover{
@@ -113,14 +114,31 @@ input {
 
 .add-playlist-btn {
     background-color: #00FF0000; /* Color de fondo para el add */
-    color: #e1b1bc ; 
+    color: #d99eac ; 
     font-size: 20px;
 }
 .add-playlist-btn:hover{
     transition: all .5s;
     transform: rotate(-3deg) scale(1.1);
 }
-
+.remove-fav-btn{
+    background-color: #00FF0000; /* Color de fondo para el add */
+    color: #165ec3 ; 
+    font-size: 20px;
+}
+.remove-fav-btn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+}
+.remove-playlist-btn{
+    background-color: #00FF0000; /* Color de fondo para el add */
+    color: #2e90a7 ; 
+    font-size: 20px;
+}
+.remove-playlist-btn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+}
 
 button {
     border: none; 
@@ -236,7 +254,7 @@ img {
 }
 
 .contenedor1 {
-    height: 810px;
+    height: 800px;
     width: 680px;
     position: relative;
     overflow: hidden;
@@ -298,7 +316,7 @@ img {
 /*scroll que no funciona*/
 #listaPlaylist {
     /* Altura máxima para el div */
-    max-height: 150px;
+    max-height: 200px;
     color: #2f2c79;
     list-style: none;
     /* scroll vertical */
@@ -320,7 +338,7 @@ img {
 /*sroll que no funciona*/
 #listaFavoritos {
     /* Altura máxima para el div */
-    max-height: 150px;
+    max-height: 200px;
     color: #2f2c79;
     list-style: none;
     /* scroll vertical */
@@ -351,6 +369,14 @@ img {
     border-radius: 30px;
 }
 
+#nombre,#anio, #genero{
+    color: #520f6d;
+    font-size:larger;
+}
+#artista,#duracion{
+    color: #161b84;
+    font-size: larger;
+}
 
 
 .favoritos {
