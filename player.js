@@ -273,8 +273,8 @@ reproducir(cancionIndex) {
     document.getElementById('nombre').innerText = `Nombre: ${cancion.nombre}`;
     document.getElementById('artista').innerText = `Artista: ${cancion.artista}`;
     document.getElementById('anio').innerText = `Año: ${cancion.anio}`;
-    document.getElementById('duracion').innerText = `Duracion: ${cancion.duracion}`;
-    document.getElementById('genero').innerText = `Genero: ${cancion.genero}`;
+    document.getElementById('duracion').innerText = `Duración: ${cancion.duracion}`;
+    document.getElementById('genero').innerText = `Género: ${cancion.genero}`;
     
     // Actualiza la lista activa
     this.listaActiva = 'cancionesBusqueda';
@@ -379,8 +379,8 @@ reproducir(cancionIndex) {
         document.getElementById('nombre').innerText = `Nombre: ${cancion.nombre}`;
         document.getElementById('artista').innerText = `Artista: ${cancion.artista}`;
         document.getElementById('anio').innerText = `Año: ${cancion.anio}`;
-        document.getElementById('duracion').innerText = `Duracion: ${cancion.duracion}`;
-        document.getElementById('genero').innerText = `Genero: ${cancion.genero}`;
+        document.getElementById('duracion').innerText = `Duración: ${cancion.duracion}`;
+        document.getElementById('genero').innerText = `Género: ${cancion.genero}`;
         
         this.listaActiva = 'listaFavoritos';
         // No cambia la lista activa
@@ -467,8 +467,8 @@ reproducir(cancionIndex) {
         document.getElementById('nombre').innerText = `Nombre: ${cancion.nombre}`;
         document.getElementById('artista').innerText = `Artista: ${cancion.artista}`;
         document.getElementById('anio').innerText = `Año: ${cancion.anio}`;
-        document.getElementById('duracion').innerText = `Duracion: ${cancion.duracion}`;
-        document.getElementById('genero').innerText = `Genero: ${cancion.genero}`;
+        document.getElementById('duracion').innerText = `Duración: ${cancion.duracion}`;
+        document.getElementById('genero').innerText = `Género: ${cancion.genero}`;
         
         this.listaActiva = 'listaPlaylist';
     }
