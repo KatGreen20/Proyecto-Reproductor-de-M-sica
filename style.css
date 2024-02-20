@@ -67,6 +67,7 @@ footer {
   --tercer-color: #ff6ac2;
   --cuarto-color: #000000;
   --quinto-color:#dfb2f4;
+  --sexto-color: #09104F;
   --primary-font: "Kanit", sans-serif;
   /* font-weight: 800; */
   /* font-style: normal; */
@@ -103,7 +104,7 @@ body {
   margin: auto;
   margin: 20 0 0 450px;
   padding: 60px 20px 60px;
-  background: var(--cuarto-color);
+  background: var(--sexto-color);
   border-radius: 10px;
   display:grid;
   justify-content: center;
