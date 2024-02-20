@@ -161,9 +161,9 @@ h1 {
   font-weight: 800;
   font-size: 70px;
   
-  color: #4E02BB;
+  color: #fa34df;
   padding-right: 320px;
-  text-shadow: 2px 4px 1px #fa34df;
+  text-shadow: 6px 6px 1px #4E02BB;
   animation: myAnim 2s ease 0s 1 normal forwards;
   
 }
