@@ -10,3 +10,4 @@
 
 •	Jennifer Rocío Alarcón Parrales - ap_jennifer@hotmail.com 
 
+... Link de wireframes: https://www.figma.com/file/pgdfA2EW7tuKqiY8OGzSKI/reproductor?type=design&node-id=10%3A77&mode=design&t=sM34XJqNMKQCZ2E7-1
