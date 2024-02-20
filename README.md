@@ -1,5 +1,10 @@
 # Proyecto Reproductor de Música
 
+## Credenciales de la aplicación
+
+    1. usuario1 - contraseña1
+    2. usuario2 - contraseña2
+
 ## Correos de contacto
 
 •	Cindy Yazán - cindyk.20@hotmail.com
