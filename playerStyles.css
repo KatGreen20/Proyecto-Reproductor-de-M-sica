@@ -158,13 +158,13 @@ h1 {
 .re {
     
     font-family: "Kanit", sans-serif;
-  font-weight: 800;
-  font-size: 70px;
+    font-weight: 800;
+    font-size: 70px;
   
-  color: #fa34df;
-  padding-right: 320px;
-  text-shadow: 6px 6px 1px #4E02BB;
-  animation: myAnim 2s ease 0s 1 normal forwards;
+    color: #fa34df;
+    margin-left: 500px;
+    text-shadow: 6px 6px 1px #4E02BB;
+    animation: myAnim 2s ease 0s 1 normal forwards;
   
 }
 
